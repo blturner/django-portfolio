@@ -2,6 +2,7 @@ from datetime import datetime
 
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from south.modelsinspector import add_introspection_rules
 
 from portfolio import constants
 
@@ -19,6 +20,8 @@ def _get_upload_to_path(instance, filename):
 
 
 # Fields
+add_introspection_rules([], ["^portfolio\.models\.StatusField"])
+
 
 class StatusField(models.PositiveSmallIntegerField):
     """Model field for the pubishing status of an object."""
