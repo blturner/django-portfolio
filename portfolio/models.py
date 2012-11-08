@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
+from genericglue.models import SingleGFK
 
 from .constants import STATUS_CHOICES, DRAFTED, PUBLISHED, REMOVED
 
@@ -127,6 +128,10 @@ class Discipline(PortfolioBase):
     class Meta(PortfolioBase.Meta):
         verbose_name = _(u'discipline')
         verbose_name_plural = _(u'disciplines')
+
+
+class ProjectPiece(SingleGFK):
+    project = models.ForeignKey('Project', related_name='pieces')
 
 
 class Project(PortfolioBase):

@@ -1,9 +1,10 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from django.utils.translation import ugettext_noop, ungettext
+from genericglue.admin import WithGenericObjectForm
 
 from .constants import STATUS_CHOICES, DRAFTED, PUBLISHED, REMOVED
-from .models import Client, Testimonial, Medium, Discipline, Project
+from .models import Client, Testimonial, Medium, Discipline, Project, ProjectPiece
 
 
 def update_status(modeladmin, request, queryset, status):
@@ -83,6 +84,19 @@ class ClientAdmin(PortfolioBaseAdmin):
     search_fields = ('name', 'url')
 
 
+class ProjectPieceInlineForm(WithGenericObjectForm):
+    class Meta:
+        model = ProjectPiece
+
+
+class ProjectPieceInline(admin.StackedInline):
+    model = ProjectPiece
+    form = ProjectPieceInlineForm
+    fields = ('object', )
+    ct_field = "object_type"
+    ct_fk_field = "object_id"
+
+
 class ProjectAdmin(PortfolioBaseAdmin):
     actions = (draft, publish, remove)
     date_hierarchy = 'completion_date'
@@ -98,6 +112,7 @@ class ProjectAdmin(PortfolioBaseAdmin):
         'in_development')
     list_filter = ('status', 'completion_date', 'is_ongoing', 'media',
         'disciplines')
+    inlines = [ProjectPieceInline, ]
     search_fields = ('name', 'summary', 'description')
 
 

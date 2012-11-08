@@ -18,6 +18,7 @@ Requirements
 * Python_ 2.5 or newer
 * Django_ 1.4 or newer
 * PIL_
+* django-genericglue_
 
 TODO
 ----
@@ -32,3 +33,4 @@ TODO
 .. _Python: http://www.python.org/
 .. _Django: http://www.djangoproject.com/
 .. _PIL: http://www.pythonware.com/products/pil/
+.. _django-genericglue: https://github.com/blturner/django-genericglue/
