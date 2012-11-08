@@ -137,7 +137,7 @@ class ProjectPiece(SingleGFK):
 class Project(PortfolioBase):
     """A project in the portfolio."""
 
-    project_url = models.URLField(_(u'project URL'))
+    project_url = models.URLField(_(u'project URL'), blank=True)
     completion_date = models.DateField(_(u'completion date'),
         blank=True, null=True)
     is_ongoing = models.BooleanField(_(u'is ongoing'))
