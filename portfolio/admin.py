@@ -87,6 +87,7 @@ class ClientAdmin(PortfolioBaseAdmin):
 class ProjectPieceInlineForm(WithGenericObjectForm):
     class Meta:
         model = ProjectPiece
+        fields = ('project',)
 
 
 class ProjectPieceInline(admin.StackedInline):
