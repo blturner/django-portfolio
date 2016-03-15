@@ -45,15 +45,24 @@ class StatusManager(models.Manager):
 
     def drafted(self):
         """Return only objects which are drafted."""
-        return self.get_query_set().filter(status=DRAFTED)
+        try:
+            return self.get_queryset().filter(status=DRAFTED)
+        except:
+            return self.get_query_set().filter(status=DRAFTED)
 
     def published(self):
         """Return only objects which are published."""
-        return self.get_query_set().filter(status=PUBLISHED)
+        try:
+            return self.get_queryset().filter(status=PUBLISHED)
+        except:
+            return self.get_query_set().filter(status=PUBLISHED)
 
     def removed(self):
         """Return only objects which are removed from publich view."""
-        return self.get_query_set().filter(status=REMOVED)
+        try:
+            return self.get_queryset().filter(status=REMOVED)
+        except:
+            return self.get_query_set().filter(status=REMOVED)
 
 
 # Models
