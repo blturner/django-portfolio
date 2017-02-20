@@ -1,6 +1,8 @@
 """ Simple urls for use in testing the portfolio app. """
 
-from django.conf.urls.defaults import include, patterns, url
+from __future__ import unicode_literals
+
+from django.conf.urls import include, patterns, url
 
 
 urlpatterns = patterns('',

@@ -1,3 +1,4 @@
-# Must use absolute imports with ``*`` for Python 2.5.
-# from portfolio.tests.admin import *
-from portfolio.tests.models import *
+from __future__ import unicode_literals
+
+# from .admin import *
+from .models import *

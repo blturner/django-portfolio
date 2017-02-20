@@ -15,10 +15,9 @@ an up-to-date portfolio. (But I have used this in the past.)
 Requirements
 ------------
 
-* Python_ 2.5 or newer
-* Django_ 1.4 or newer
-* PIL_
-* django-genericglue_
+* Python_ 2.7 or 3.3
+* Django_ 1.4.2 or 1.5
+* Pillow_
 
 TODO
 ----
@@ -29,8 +28,8 @@ TODO
 3. Fix non-deterministic ordering issue on objects with nullable dates.
 4. Add search index for Haystack.
 5. Write admin action tests.
+6. List on PyPI.
 
 .. _Python: http://www.python.org/
 .. _Django: http://www.djangoproject.com/
-.. _PIL: http://www.pythonware.com/products/pil/
-.. _django-genericglue: https://github.com/blturner/django-genericglue/
+.. _Pillow: https://pypi.python.org/pypi/Pillow/
