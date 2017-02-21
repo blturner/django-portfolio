@@ -31,6 +31,10 @@ setup(
     install_requires=[
         'Django>=1.4.2,<1.6',
         'Pillow',
+        'genericglue',
+    ],
+    dependency_links=[
+        'https://github.com/blturner/django-genericglue/tarball/master#egg=genericglue-0.0.2',
     ],
     classifiers=[
         'Development Status :: 4 - Beta',
