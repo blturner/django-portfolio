@@ -21,7 +21,7 @@ setup(
     license='BSD',
     download_url='http://github.com/benspaulding/django-portfolio/tarball/v0.9.2',
     long_description=read('README.rst'),
-    packages=['portfolio', 'portfolio.tests'],
+    packages=['portfolio', 'portfolio.migrations', 'portfolio.tests'],
     package_data={
         'portfolio': [
             'locale/*/LC_MESSAGES/*',
