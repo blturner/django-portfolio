@@ -27,7 +27,7 @@ setup(
     package_data={
         "portfolio": ["locale/*/LC_MESSAGES/*", "templates/portfolio/*",],
     },
-    install_requires=["Django>=1.4.2", "Pillow", "genericglue",],
+    install_requires=["Django>=1.4.2", "Pillow",],
     dependency_links=[
         "https://github.com/blturner/django-genericglue/tarball/master#egg=genericglue-0.0.2",
     ],
