@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         related_name="related_projectpiece",
                         to="contenttypes.ContentType",
-                        on_delete="models.CASCADE",
+                        on_delete=models.CASCADE,
                     ),
                 ),
                 (
@@ -37,7 +37,7 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         related_name="pieces",
                         to="portfolio.Project",
-                        on_delete="models.CASCADE",
+                        on_delete=models.CASCADE,
                     ),
                 ),
             ],

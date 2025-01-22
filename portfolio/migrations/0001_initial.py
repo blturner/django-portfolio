@@ -161,7 +161,7 @@ class Migration(migrations.Migration):
                         related_name="projects",
                         verbose_name="client",
                         to="portfolio.Client",
-                        on_delete="models.CASCADE",
+                        on_delete=models.CASCADE,
                     ),
                 ),
                 (
@@ -237,7 +237,7 @@ class Migration(migrations.Migration):
                         related_name="testimonials",
                         verbose_name="client",
                         to="portfolio.Client",
-                        on_delete="models.CASCADE",
+                        on_delete=models.CASCADE,
                     ),
                 ),
             ],

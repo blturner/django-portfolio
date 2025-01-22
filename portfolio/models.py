@@ -6,7 +6,6 @@ except ImportError:
     from django.core.urlresolvers import reverse
 from django.db import models
 from django.utils import timezone
-from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
 from genericglue.models import SingleGFK
 
@@ -77,10 +76,6 @@ class StatusManager(models.Manager):
             return self.get_query_set().filter(status=REMOVED)
 
 
-# Models
-
-
-@python_2_unicode_compatible
 class PortfolioBase(models.Model):
     """Base class with fields and methods common to all Portfolio models."""
 
