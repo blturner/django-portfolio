@@ -6,7 +6,7 @@ except ImportError:
     from django.core.urlresolvers import reverse
 from django.db import models
 from django.utils import timezone
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from genericglue.models import SingleGFK
 
 from .constants import STATUS_CHOICES, DRAFTED, PUBLISHED, REMOVED
